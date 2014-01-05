@@ -1,0 +1,10 @@
+<h1>All Job Vacancy Announcements</h1>
+<% @announcements.each do |announcement| %>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+<%= link_to announcement.title, announcement %>
+     </h4>
+    </div>
+  </div>
+<% end %>

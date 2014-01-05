@@ -1,4 +1,12 @@
 Jobseekers::Application.routes.draw do
+  get "announcements/index"
+
+  get "announcements/show"
+
+  get "announcements/new"
+
+  get "announcements/edit"
+
   get "welcome/index"
 
   get "welcome/about"
