@@ -1,2 +1,8 @@
-<h1>Welcome to Jobseekers!</h1>
-<p id="index-title">This is the home page for Jobseekers.</p>
+<div class="hero-unit">
+  <h1>Jobseekers</h1>
+  <p>Jobseekers is an online resource for focussing and tracking the progress of your job search.</p>
+  <p>
+      <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary btn-large' %> or 
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary btn-large' %> today!
+  </p>
+</div>
