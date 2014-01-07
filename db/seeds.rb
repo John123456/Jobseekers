@@ -1,3 +1,13 @@
+u = User.first
+u.skip_reconfirmation!
+u.update_attributes(email: 'jsrratt@aol.com', password: 'helloworld', password_confirmation: 'helloworld')
+
+puts "Seed finished"
+puts "#{User.count} users created"
+puts "#{Post.count} posts created"
+puts "#{Comment.count} comments created"
+
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #

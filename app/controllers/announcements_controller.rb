@@ -12,6 +12,7 @@ class AnnouncementsController < ApplicationController
   end
 
 def create
+@announcement = current_user.announcements.build(params[:post])
   @announcement = Announcement.new(params[:announcement])
   if @announcement.save
     flash[:notice] = "Job Announcement was saved."
