@@ -9,11 +9,14 @@ class AnnouncementsController < ApplicationController
 
   def new
     @announcement = Announcement.new
+    authorize! :create, Post  
   end
 
 def create
+
 @announcement = current_user.announcements.build(params[:post])
   @announcement = Announcement.new(params[:announcement])
+  authorize! :create, @announcement, message: "You need to be signed up to do that."  
   if @announcement.save
     flash[:notice] = "Job Announcement was saved."
     redirect_to @announcement
