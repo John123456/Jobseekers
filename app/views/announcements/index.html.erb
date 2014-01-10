@@ -1,4 +1,7 @@
 <h1>All Job Announcements</h1>
+
+<%= link_to "New Announcement", new_announcement_path, class: 'btn btn-large btn-block' %>
+
 <% @announcements.each do |announcement| %>
   <div class="media">
     <div class="media-body">

@@ -1,13 +1,7 @@
 Jobseekers::Application.routes.draw do
   devise_for :users
 
-  get "announcements/index"
-
-  get "announcements/show"
-
-  get "announcements/new"
-
-  get "announcements/edit"
+  resources :announcements
 
   get "welcome/index"
 
