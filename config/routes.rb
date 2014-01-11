@@ -1,13 +1,15 @@
 Jobseekers::Application.routes.draw do
   devise_for :users
 
-  resources :announcements
+  resources :announcements do
+    resources :notes
+  end
 
   get "welcome/index"
 
   get "welcome/about"
 
-    root to: 'welcome#index'
+  root to: 'welcome#index'
 end
 
   # The priority is based upon order of creation:

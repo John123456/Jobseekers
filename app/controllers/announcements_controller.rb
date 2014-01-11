@@ -31,7 +31,7 @@ def edit
 end
 
   def update
-    @announcement = announcement.find(params[:id])
+    @announcement = Announcement.find(params[:id])
     if @announcement.update_attributes(params[:announcement])
       flash[:notice] = "Job Announcement was updated."
       redirect_to @announcement
