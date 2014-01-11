@@ -1,5 +1,6 @@
 <h1><%= @announcement.title %></h1>
 
+<% if can? :edit, @announcement %>
 <%= link_to "Edit", edit_announcement_path(@announcement), class: 'btn btn-mini' %>
 
 <p><%= @announcement.description %></p>

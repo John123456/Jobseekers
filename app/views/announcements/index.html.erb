@@ -1,5 +1,6 @@
 <h1>All Job Announcements</h1>
 
+<% if can? :create, Announcement %>
 <%= link_to "New Announcement", new_announcement_path, class: 'btn btn-large btn-block' %>
 
 <% @announcements.each do |announcement| %>
@@ -15,4 +16,3 @@
       </small>
     </div>
   </div>
-<% end %>
