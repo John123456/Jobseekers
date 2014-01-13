@@ -2,7 +2,7 @@
 
 <% if can? :create, Announcement %>
 <%= link_to "New Announcement", new_announcement_path, class: 'btn btn-large btn-block' %>
-
+<%end %>
 <% @announcements.each do |announcement| %>
   <div class="media">
     <div class="media-body">
@@ -16,3 +16,4 @@
       </small>
     </div>
   </div>
+  <%end%>
